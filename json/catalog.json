@@ -1,0 +1,12 @@
+[
+  {
+    "text": "Велодорожки",
+    "img": "src/cards/bike_2.jpg",
+    "link": "velopaths.html"
+  },
+  {
+    "text": "Решение пробок",
+    "img": "src/cards/bike_1.jpg",
+    "link": "solutions.html"
+  }
+]
