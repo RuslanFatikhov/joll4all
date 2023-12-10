@@ -1,0 +1,125 @@
+[
+  {
+    "group": "transport",
+    "show_group_text": true,
+    "group_text": "Транспорт",
+    "group_class": "whitegr",
+    "group_items": [
+      {
+        "text": "Велодорожки",
+        "img": "src/cards/bike.png",
+        "link": "velopath",
+        "script":"js/velo.js",
+        "item_size": "medium"
+      },
+      {
+        "text": "Проблемы ОТ",
+        "img": "src/cards/bus.png",
+        "link": "transport",
+        "script":"js/bus.js",
+        "item_size": "medium"
+      },
+      {
+        "text": "Карта ДТП",
+        "img": "src/cards/car.png",
+        "link": "dtp",
+        "script":"js/dtp.js",
+        "item_size": "medium"
+      },
+      {
+        "text": "Перекрестки",
+        "img": "",
+        "link": "cross",
+        "item_size": "medium"
+      },
+      {
+        "text": "Метро",
+        "img": "",
+        "link": "subway",
+        "script":"js/metro.js",
+        "item_size": "medium"
+      },
+      {
+        "text": "Walkability",
+        "img": "",
+        "link": "walk",
+        "item_size": "medium"
+      }
+    ]
+  },
+  {
+    "group": "ecology",
+    "show_group_text": true,
+    "group_text": "Экология",
+    "group_class": "whitegr",
+    "group_items": [
+      {
+        "text": "Экопосты",
+        "img": "src/cards/bike.png",
+        "link": "eco",
+        "script":"js/eco.js",
+        "item_size": "medium"
+      },
+      {
+        "text": "Качество воздуха",
+        "img": "src/cards/bus.png",
+        "link": "air",
+        "script":"js/air.js",
+        "item_size": "medium"
+      }
+    ]
+  },
+  {
+    "group": "culture",
+    "show_group_text": true,
+    "group_text": "Культура",
+    "group_class": "whitegr",
+    "group_items": [
+      {
+        "text": "Памятники",
+        "img": "src/cards/bike.png",
+        "link": "statues",
+        "item_size": "medium"
+      },
+      {
+        "text": "Архитектура",
+        "img": "src/cards/bus.png",
+        "link": "architecture",
+        "item_size": "medium"
+      },
+      {
+        "text": "Фрески",
+        "img": "src/cards/bus.png",
+        "link": "fresks",
+        "item_size": "medium"
+      }
+    ]
+  },
+  {
+    "group": "links",
+    "show_group_text": false,
+    "group_text": "",
+    "group_class": "ghostgr",
+    "group_item_size": "sizel",
+    "group_items": [
+        {
+          "text": "Подписывайтесь на телеграм-канал",
+          "img": "",
+          "link": "#",
+          "item_size": "large"
+        },
+        {
+          "text": "Подписывайтесь на Instagram",
+          "img": "",
+          "link": "#",
+          "item_size": "large"
+        },
+        {
+          "text": "Подписывайтесь на Tik-tik",
+          "img": "",
+          "link": "#",
+          "item_size": "large"
+        }
+      ]
+  }
+]

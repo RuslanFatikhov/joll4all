@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "120",
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.957902, 43.262843]
+        ]
+    },
+    {
+        "id": 2,
+        "name": "154",
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.929725, 43.262828]
+        ]
+    },
+    {
+        "id": 3,
+        "name": "120",
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.950870, 43.264319]
+        ]
+    },
+    {
+        "id": 4,
+        "name": "76",
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.950230, 43.269626]
+        ]
+    }
+]

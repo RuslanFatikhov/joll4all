@@ -18,36 +18,35 @@ body{
     background-color: var(--white200);
     padding-left: 1em;
     padding-right: 1em;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    overflow-y: hidden  ;
 }
 
-a{
-    text-decoration: none;
+main{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+    align-self: stretch;
+    gap: 12px;
+    height: 87vh;
 }
 
-.s12{
-    width:100%;
-    height: 12px;
+.cardxl{
+    display: flex;
+    padding: 32px 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+    height: 79vh;
+    border-radius: 16px;
+    background-color: yellow;
+    order: 2;
 }
 
-.s20{
-    width:100%;
-    height: 20px;
-}
-
-.s30{
-    width:100%;
-    height: 30px;
-}
-
-.s40{
-    width:100%;
-    height: 40px;
-}
-
-.s100{
-    width:100%;
-    height: 100px;
-}
 
 #header{
     position: fixed;
@@ -120,165 +119,28 @@ button{
     transition: 0.15s ease-in-out;
 }
 
-.banner-l{
-    width: 100%;
-    height: 240px;
-    border-radius: 16px;
-    transition: 0.25s ease-in-out;
-}
-
-.banner-l{
-    transition: 0.25s ease-in-out;
-}
-
-#banner-about{
-    background-image: url(https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.black100{
-    color: var(--black100);
-}
-
-.black200{
-    color: var(--black200);
-}
-
-#main-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-    justify-content: center;
-
-    background: var(--white100);
-    border-radius: 16px;
-
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.catalog-card{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 260px;
-    gap: 12px;
-    border-radius: 16px;
-    transition: 0.25s ease-in-out;
-}
-
-.catalog-card img{
-    width: auto;
-    height: 160px;
-    border-radius: 16px;
-    overflow: hidden;
-    object-fit: cover;
-    padding: 8px;
-}
-
-.catalog-card:hover{
-    background-color: var(--hoverwhite);
-    transform: scale(0.99);
-    transition: 0.25s ease-in-out;
-}
-
-.catalog-card h3{
-    color: var(--black200);
-    text-align: center;
-}
-
-/* Стили для поп-апа */
-#disabled {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-
-#map{
-    height: 88vh;
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.map-point{
-    width: 1em;
-    height: 1em;
-    background-color: var(--black100);
-    border: 2px solid var(--gray100);
-    border-radius: 16px;
-    cursor: pointer;
-}
-
-/* Добавьте в ваши стили (можете дополнить стилями по вашему вкусу) */
-.custom-popup {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 16px;
-    background-color: var(--white100);
-    padding: 32px 16px 20px 16px;
-    z-index: 1;
-    border-radius: 16px;
-    width: 100%;
-    max-width: 270px;
-    max-height: 83vh;
-    overflow-y: scroll;
-}
-
-.custom-popup video{
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 16px;
-}
-  
-.map {
-    width: 100%;
-    height: 100%;
-}
-
-#close-popup-btn{
-    position: absolute;
-    top: 8px;
-    right: 8px;
-}
-
-
 
   
 
+@media screen and (max-width: 700px) {
 
+    body{
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-@media screen and (max-width: 600px){
-    #main-grid{
-        grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
-        gap: 10px;
-        justify-content: center;
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     
-        padding: 16px;
-        background: var(--white100);
-        border-radius: 16px;
+
+    .cardxl{
+        width: auto;
+        height: 300px;
     }
 
-    .catalog-card{
-        height: 130px;
-    }
-
-    .catalog-card img{
-        height: 70px;
-    }
 
 }
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Meta -->
+    <title>Map Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link href="style/reset.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/map.css" rel="stylesheet">
+    <link href="style/fonts.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main class="mainmap">
+        <div class="menu-scroll"><div id="menu"></div></div>
+        
+        <!--Main-card-->
+        <div class="map-card">
+            <h3 id="text"></h3>
+            <div class="scroll-list">
+                <ul id="list"></ul>
+            </div>
+        </div>
+
+        <!--Map-->
+        <div id="map" class="map"></div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+    <script src="js/menu-loader.js"></script>
+    <script src="js/components.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+
+</body>
+
+</html>
