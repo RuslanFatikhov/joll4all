@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
 .caption{
     font-family: Manrope;
     font-size: 12px;
@@ -5,6 +7,15 @@
     font-weight: 400;
     line-height: 14px; /* 116.667% */
     letter-spacing: -0.24px;
+}
+
+h1{
+    font-family: 'Manrope';
+}
+
+h2{
+    /* h3/Bold */
+    font-family: 'Manrope';
 }
 
 h3{
@@ -24,6 +35,10 @@ p{
     font-weight: 400;
     line-height: 20px; /* 125% */
     letter-spacing: -0.32px;
+}
+
+a{
+    font-family: 'Manrope';
 }
 
 @media screen and (max-width: 600px){

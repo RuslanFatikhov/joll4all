@@ -4,50 +4,39 @@
 <head>
     <!--Meta-->
     <title>JOLL4ALL</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Styles-->
     <link href="style/reset.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
+    <link href="style/menu.css" rel="stylesheet">
     <link href="style/fonts.css" rel="stylesheet">
-    <link href="style/banners.css" rel="stylesheet">
-
-    <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
+
     <!--Header-->
     <div id="header"></div>
 
-    <div class="s40"></div>
+    <main>
+        <div class="scroll">
+        <div id="menu"></div>
+        </div>
 
-    <!--Banner-->
-    <a href="#">
-        <div class="banner-l" id="banner-about"></div>
-    </a>
+        <!--Card XL-->
+        <a href="#" class="cardxl">
+            <h2>JOLL4ALL</h2>
+            <p>JOLL4ALL</p>
+        </a>
+    </main>
 
-    <div class="s20"></div>
-
-    <!--Grid-->
-    <div id="main-grid"></div>
 
     <!--Footer-->
     <div id="footer"></div>
 
-    <div class="s100"></div>
-
-    <div id="disabled">
-        <p>Это ваш поп-ап содержимое</p>
-        <button id="close-pop" onclick="closePopup()">Закрыть</button>
-    </div>
-
     <!--Scripts-->
+    <script src="js/menu.js"></script>
     <script src="js/components.js"></script>
-    <script src="js/catalog.js"></script>
 </body>
 
 </html>
