@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jol4All</title>
+        <!--Styles-->
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/colors.css"/>
+        <link rel="stylesheet" href="css/index.css"/>
+        <link rel="stylesheet" href="css/header.css"/>
+        <link rel="stylesheet" href="css/buttons.css"/>
+        <link rel="stylesheet" href="css/fonts.css"/>
+        <link rel="stylesheet" href="css/map.css"/>
+
+
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="header"></div>
+        
+        <main class="mainmap">
+            <!--Main-card-->
+            <div class="left">
+                <div class="map-card">
+                    <h2 class="bold white100">Карта ДТП</h2>
+                    <div class="s30"></div>
+                    <h3 class="white200">Фильтры</h3>
+                    <ul class="gridcard">
+                        <li><img src="src/icon/car.svg"><p class="white100">Авто</p></li>
+                        <li><img src="src/icon/ped.svg"><p class="white100">Пешеходы</p></li>
+                        <li><img src="src/icon/kid.svg"><p class="white100">Дети</p></li>
+                        <li><img src="src/icon/bike.svg"><p class="white100">Велосипеды</p></li>
+                        <li><img src="src/icon/bus.svg"><p class="white100">ОТ</p></li>
+                    </ul>
+                </div>
+
+                <div class="map-card">
+                    <h3 class="white200">Декабрь 2023</h3>
+                    <ul class="gridcard">
+                        <li><h3 class="bold white100">567</h3><p class="white100">ДТП</p></li>
+                        <li><h3 class="bold">132</h3><p class="white100">пострадали</p></li>
+                        <li><h3 class="bold">7</h3><p class="white100">смертей</p></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!--Map-->
+            <div id="map" class="map"></div>
+        </main>
+
+        <div id="footer"></div>
+
+        <script>
+            // Функция для загрузки содержимого файла
+            function loadComponent(url, targetId) {
+              fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(targetId).innerHTML = data)
+                .catch(error => console.error('Error loading component:', error));
+            }
+          
+            // Загружаем содержимое header.html и вставляем в элемент с id "header"
+            loadComponent('components/header.html', 'header');
+          
+            // Загружаем содержимое footer.html и вставляем в элемент с id "footer"
+            loadComponent('components/footer.html', 'footer');
+        </script>
+
+        <script src="js/cars.js"></script>
+
+
+    </body>
+</html>

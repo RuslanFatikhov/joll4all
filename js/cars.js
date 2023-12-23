@@ -10,59 +10,64 @@ const map = new mapboxgl.Map({
 
 // Объявление safetyLevels в глобальной области видимости
 const safetyLevels = {
-    5: { color: '#64C750', text: 'Отлично' },
-    4: { color: '#FFBD3F', text: 'Хорошо' },
-    3: { color: '#E55D47', text: 'Плохо' },
-    2: { color: '#772613', text: 'Ужасно' },
-    1: { color: '#121212', text: 'Очень небезопасно' }
+    5: { color: '#64C750', text: 'Без пострадавших' },
+    4: { color: '#FFBD3F', text: 'Легкий' },
+    3: { color: '#E55D47', text: 'Тяжелый' },
+    2: { color: '#772613', text: 'Есть погибший' },
+    1: { color: '#121212', text: 'Есть погибшие' }
 };
 
 let clickedItem = null; // Хранит информацию о последнем выбранном элементе
 
 // Загрузка данных из JSON-файла
-fetch('json/velopath.json')
-    .then(response => response.json())
+fetch('json/cars.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Ошибка загрузки данных: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
+        const layers = [];
+
         data.forEach(bikePath => {
             const roadColor = safetyLevels[bikePath.safetyLevel]?.color || '#121212';
             const safetyText = safetyLevels[bikePath.safetyLevel]?.text || 'Неизвестно';
 
-            map.addLayer({
-                'id': `bike-path-${bikePath.id}`,
-                'type': 'line',
-                'source': {
-                    'type': 'geojson',
-                    'data': {
-                        'type': 'Feature',
-                        'properties': {
-                            'id': bikePath.id,
-                            'name': bikePath.name,
-                            'safetyLevel': bikePath.safetyLevel,
-                            'safetyText': safetyText,
-                            'description': bikePath.description,
-                            'source': bikePath.source,
-                            'date': bikePath.date
-                        },
-                        'geometry': {
-                            'type': 'LineString',
-                            'coordinates': bikePath.coordinates
+            bikePath.coordinates.forEach(coord => {
+                const layer = {
+                    'id': `bike-point-${bikePath.id}-${coord[0]}-${coord[1]}`,
+                    'type': 'circle',
+                    'source': {
+                        'type': 'geojson',
+                        'data': {
+                            'type': 'Feature',
+                            'properties': {
+                                'id': bikePath.id,
+                                'name': bikePath.name,
+                                'safetyLevel': bikePath.safetyLevel,
+                                'safetyText': safetyText,
+                                'description': bikePath.description,
+                                'source': bikePath.source,
+                                'date': bikePath.date
+                            },
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': coord
+                            }
                         }
+                    },
+                    'paint': {
+                        'circle-color': roadColor,
+                        'circle-radius': 6
                     }
-                },
-                'layout': {
-                    'line-join': 'round',
-                    'line-cap': 'round'
-                },
-                'paint': {
-                    'line-color': roadColor,
-                    'line-width': 4
-                }
+                };
+
+                layers.push(layer);
             });
         });
 
-        // Выводим текст в элементе h3
-        const mapTitleElement = document.getElementById('text');
-        mapTitleElement.textContent = "Велодорожки"; // Установите нужный текст
+        layers.forEach(layer => map.addLayer(layer));
 
         // Создаем список велодорожек
         const veloListElement = document.getElementById('list');
@@ -85,9 +90,11 @@ fetch('json/velopath.json')
 
                 // Изменение прозрачности других велодорожек
                 data.forEach(otherItem => {
-                    const layerId = `bike-path-${otherItem.id}`;
-                    const opacity = otherItem.id === selectedItem.id ? 1 : 0.1;
-                    map.setPaintProperty(layerId, 'line-opacity', opacity);
+                    otherItem.coordinates.forEach(coord => {
+                        const layerId = `bike-point-${otherItem.id}-${coord[0]}-${coord[1]}`;
+                        const opacity = otherItem.id === selectedItem.id ? 1 : 0.1;
+                        map.setPaintProperty(layerId, 'circle-opacity', opacity);
+                    });
                 });
 
                 // Добавляем класс clicked к выбранному элементу списка
@@ -108,18 +115,12 @@ function createListItem(item) {
     const listItem = document.createElement('li');
     listItem.classList.add('list-card');
 
-    const nameElement = document.createElement('p');
-    nameElement.textContent = item.name;
-
-    const safetyLevelElement = document.createElement('p');
-    safetyLevelElement.classList.add('label');
-    const safetyLevelData = safetyLevels[item.safetyLevel];
-    safetyLevelElement.textContent = safetyLevelData.text;
-    safetyLevelElement.style.backgroundColor = safetyLevelData.color;
-
-    listItem.appendChild(nameElement);
-    listItem.appendChild(safetyLevelElement);
+    listItem.innerHTML = `
+        <p class="name">${item.name}</p>
+        <p class="label" style="background-color: ${safetyLevels[item.safetyLevel].color}">
+            ${safetyLevels[item.safetyLevel].text}
+        </p>
+    `;
 
     return listItem;
 }
-

@@ -1,42 +1,115 @@
-<!DOCTYPE html>
-<html lang="ru">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jol4All</title>
+        <!--Styles-->
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/colors.css"/>
+        <link rel="stylesheet" href="css/index.css"/>
+        <link rel="stylesheet" href="css/header.css"/>
+        <link rel="stylesheet" href="css/buttons.css"/>
+        <link rel="stylesheet" href="css/fonts.css"/>
+    </head>
 
-<head>
-    <!--Meta-->
-    <title>JOLL4ALL</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <body>
+        <div id="header"></div>
 
-    <!--Styles-->
-    <link href="style/reset.css" rel="stylesheet">
-    <link href="style/style.css" rel="stylesheet">
-    <link href="style/menu.css" rel="stylesheet">
-    <link href="style/fonts.css" rel="stylesheet">
-</head>
+        <span class="s50"></span>
+        
+        <main>
+            <!--Cover-->
+            <div class="cover">
+                <h1 class="accent100 bold">Показываем проблемы<br>в городе</h1>
+            </div>
 
-<body>
+            <div id="grid"></div>
+        </main>
 
-    <!--Header-->
-    <div id="header"></div>
+        <div id="footer"></div>
 
-    <main>
-        <div class="scroll">
-        <div id="menu"></div>
-        </div>
+        <script>
+            // Функция для загрузки содержимого файла
+            function loadComponent(url, targetId) {
+              fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(targetId).innerHTML = data)
+                .catch(error => console.error('Error loading component:', error));
+            }
+          
+            // Загружаем содержимое header.html и вставляем в элемент с id "header"
+            loadComponent('components/header.html', 'header');
+          
+            // Загружаем содержимое footer.html и вставляем в элемент с id "footer"
+            loadComponent('components/footer.html', 'footer');
+        </script>
 
-        <!--Card XL-->
-        <a href="#" class="cardxl">
-            <h2>JOLL4ALL</h2>
-            <p>JOLL4ALL</p>
-        </a>
-    </main>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+    const jsonPath = "json/data.json";
 
+    fetch(jsonPath)
+        .then(response => response.json())
+        .then(data => buildTable(data.categories));
 
-    <!--Footer-->
-    <div id="footer"></div>
+    function buildTable(categories) {
+        const gridContainer = document.getElementById("grid");
 
-    <!--Scripts-->
-    <script src="js/menu.js"></script>
-    <script src="js/components.js"></script>
-</body>
+        categories.forEach(category => {
+            const group = document.createElement("div");
+            group.classList.add("group");
 
+            const heading = document.createElement("h2");
+            heading.textContent = category.heading;
+            heading.classList.add("bold");
+
+            const grid = document.createElement("div");
+            grid.classList.add("grid");
+
+            category.items.forEach(item => {
+                const card = document.createElement("a");
+                card.classList.add("card");
+                card.id = item.link;
+
+                card.style.backgroundColor = item.background;
+
+                const heading = document.createElement("h3");
+                heading.textContent = item.text;
+                heading.classList.add("white100");
+
+                const chevronIcon = document.createElement("img");
+                chevronIcon.src = "src/icon/arrow.svg";
+                chevronIcon.classList.add("arrow");
+
+                const img = document.createElement("img");
+                img.src = "src/" + item.img;
+                img.classList.add("card-icon");
+
+                card.appendChild(heading);
+                card.appendChild(chevronIcon);
+                card.appendChild(img);
+
+                grid.appendChild(card);
+            });
+
+            group.appendChild(heading);
+            group.appendChild(grid);
+
+            gridContainer.appendChild(group);
+        });
+
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            card.addEventListener("click", function () {
+                const link = this.id;
+                window.location.href = link + ".html";
+            });
+        });
+    }
+});
+        </script>
+
+        
+
+    </body>
 </html>

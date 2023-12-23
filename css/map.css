@@ -1,0 +1,137 @@
+.mainmap{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+    width: 100%;
+    height: calc(100% - 100px);
+
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.map-card{
+    min-width: 290px;
+    padding: 10px;
+    background-color: var(--black100);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+
+.map-card h3{
+    color: var(--white200);
+    font-weight: 700;
+}
+
+.scroll-list{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.scroll-list ul{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.list-card{
+    padding: 10px;
+    background-color: var(--black200);
+    border-radius: 2px;
+    position: relative;
+    min-height: 50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.name{
+    color: var(--white200);
+    font-weight: 700;
+    max-width: 200px;
+}
+
+.list-card:hover{
+    background-color: var(--black300);
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 10px; /* Ширина скроллбара */
+}
+
+.label{
+    min-width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    padding: 4px;
+    border-radius: 2px;
+    letter-spacing: 0.25px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--black100) !important;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    height: 100%;
+    max-width: 390px;
+}
+
+.gridcard{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.gridcard li{
+    height: 100px;
+    min-width: 100px;
+    flex: 1 0 0;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    background-color: var(--black300);
+    border-radius: 2px;
+    transition: 0.25s;
+}
+
+.gridcard img{
+    width: 24px;
+    height: 24px;
+}
+
+.gridcard li:hover{
+    background-color: var(--black200);
+    transition: 0.25s;
+}
+
+.gridcard p{
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    text-align: center;
+}
+
+.list-card p{
+    color: var(--white200);
+}
