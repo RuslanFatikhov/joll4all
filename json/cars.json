@@ -1,0 +1,422 @@
+[
+    {
+        "id": 1,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.957902, 43.262843]
+        ]
+    },
+    {
+        "id": 2,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.929725, 43.262828]
+        ]
+    },
+    {
+        "id": 3,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.950870, 43.264319]
+        ]
+    },
+    {
+        "id": 4,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.950230, 43.269626]
+        ]
+    },
+    {
+        "id": 5,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.962511, 43.256418]
+        ]
+    },
+    {
+        "id": 6,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.941732, 43.261507]
+        ]
+    },
+    {
+        "id": 7,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.925618, 43.268935]
+        ]
+    },
+    {
+        "id": 8,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.953874, 43.263712]
+        ]
+    },
+    {
+        "id": 9,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.932410, 43.257904]
+        ]
+    },
+    {
+        "id": 10,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.958724, 43.267518]
+        ]
+    },
+    {
+        "id": 11,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.943621, 43.260135]
+        ]
+    },
+    {
+        "id": 12,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.936789, 43.266819]
+        ]
+    },
+    {
+        "id": 13,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.947205, 43.255602]
+        ]
+    },
+    {
+        "id": 14,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.968410, 43.264982]
+        ]
+    },
+    {
+        "id": 15,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.926507, 43.259703]
+        ]
+    },
+    {
+        "id": 16,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.935624, 43.266137]
+        ]
+    },
+    {
+        "id": 17,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.951829, 43.259418]
+        ]
+    },
+    {
+        "id": 18,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.959238, 43.266724]
+        ]
+    },
+    {
+        "id": 19,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.945317, 43.258539]
+        ]
+    },
+    {
+        "id": 20,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.937502, 43.265018]
+        ]
+    },
+    {
+        "id": 21,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.944216, 43.263118]
+        ]
+    },
+    {
+        "id": 22,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.929053, 43.267422]
+        ]
+    },
+    {
+        "id": 23,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.967319, 43.261925]
+        ]
+    },
+    {
+        "id": 24,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.953002, 43.268316]
+        ]
+    },
+    {
+        "id": 25,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.936124, 43.256724]
+        ]
+    },
+    {
+        "id": 26,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.947502, 43.260418]
+        ]
+    },
+    {
+        "id": 27,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.958831, 43.264624]
+        ]
+    },
+    {
+        "id": 28,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.932719, 43.259831]
+        ]
+    },
+    {
+        "id": 29,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.941926, 43.265132]
+        ]
+    },
+    {
+        "id": 30,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.926320, 43.267920]
+        ]
+    },
+    {
+        "id": 31,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.954108, 43.259233]
+        ]
+    },
+    {
+        "id": 32,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.935830, 43.266431]
+        ]
+    },
+    {
+        "id": 33,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.949419, 43.258744]
+        ]
+    },
+    {
+        "id": 34,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.926534, 43.263842]
+        ]
+    },
+    {
+        "id": 35,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.963624, 43.262618]
+        ]
+    },
+    {
+        "id": 36,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.937738, 43.266924]
+        ]
+    },
+    {
+        "id": 37,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.946617, 43.258324]
+        ]
+    },
+    {
+        "id": 38,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.953924, 43.266018]
+        ]
+    },
+    {
+        "id": 39,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.940512, 43.259539]
+        ]
+    },
+    {
+        "id": 40,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.928426, 43.268128]
+        ]
+    },
+    {
+        "id": 41,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.948724, 43.257109]
+        ]
+    },
+    {
+        "id": 42,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.932205, 43.263319]
+        ]
+    },
+    {
+        "id": 43,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.956319, 43.267624]
+        ]
+    },
+    {
+        "id": 44,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.934518, 43.260935]
+        ]
+    },
+    {
+        "id": 45,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.950824, 43.264724]
+        ]
+    },
+    {
+        "id": 46,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.937630, 43.258130]
+        ]
+    },
+    {
+        "id": 47,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.962924, 43.261824]
+        ]
+    },
+    {
+        "id": 48,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.944410, 43.267132]
+        ]
+    },
+    {
+        "id": 49,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.930639, 43.255539]
+        ]
+    },
+    {
+        "id": 50,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.965002, 43.268418]
+        ]
+    },
+    {
+        "id": 51,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.955218, 43.262539]
+        ]
+    },
+    {
+        "id": 52,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.933724, 43.260624]
+        ]
+    },
+    {
+        "id": 53,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.942932, 43.263924]
+        ]
+    },
+    {
+        "id": 54,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.928830, 43.266418]
+        ]
+    },
+    {
+        "id": 55,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.947324, 43.259235]
+        ]
+    },
+    {
+        "id": 56,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.953619, 43.265830]
+        ]
+    },
+    {
+        "id": 57,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.936418, 43.258924]
+        ]
+    },
+    {
+        "id": 58,
+        "safetyLevel": 4,
+        "coordinates": [
+            [76.950410, 43.267032]
+        ]
+    },
+    {
+        "id": 59,
+        "safetyLevel": 2,
+        "coordinates": [
+            [76.943002, 43.260735]
+        ]
+    },
+    {
+        "id": 60,
+        "safetyLevel": 3,
+        "coordinates": [
+            [76.964624, 43.265624]
+        ]
+    }
+]

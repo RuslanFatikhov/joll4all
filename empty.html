@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jol4All</title>
+        <!--Styles-->
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/colors.css"/>
+        <link rel="stylesheet" href="css/index.css"/>
+        <link rel="stylesheet" href="css/header.css"/>
+        <link rel="stylesheet" href="css/buttons.css"/>
+        <link rel="stylesheet" href="css/fonts.css"/>
+    </head>
+
+    <body>
+        <div id="header"></div>
+
+        <span class="s50"></span>
+        
+        <div class="empty">
+            <h1>Этот раздел пока не доступен</h1>
+        </div>
+
+        <div id="footer"></div>
+
+        <script>
+            // Функция для загрузки содержимого файла
+            function loadComponent(url, targetId) {
+              fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(targetId).innerHTML = data)
+                .catch(error => console.error('Error loading component:', error));
+            }
+          
+            // Загружаем содержимое header.html и вставляем в элемент с id "header"
+            loadComponent('components/header.html', 'header');
+          
+            // Загружаем содержимое footer.html и вставляем в элемент с id "footer"
+            loadComponent('components/footer.html', 'footer');
+        </script>
+
+
+        
+
+    </body>
+</html>

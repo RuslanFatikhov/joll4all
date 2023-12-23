@@ -1,0 +1,29 @@
+.ghost{
+    background:none;
+    transition: 0.15s ease-in-out;
+}
+
+.ghost:hover{
+    color: var(--accent100);
+    background-color: var(--hover10);
+    transition: 0.15s ease-in-out;
+}
+
+.sizes{
+    display: inline-flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    height: 100%;
+    font-family: "Inter Tight";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+    box-sizing: border-box;
+
+    max-height: 40px;
+}
+

@@ -1,0 +1,24 @@
+:root{
+    --bg: #191919;
+
+    --white100:#fefefe;
+    --white200:#F2F2F2;
+
+    --accent100:#00E6E6;
+
+    --black100: #262626;
+    --black200:#2E2E2E;
+    --black300:#333333;
+
+
+    --hover10:rgba(0, 230, 230, 0.10);
+
+}
+
+.accent100{
+    color: var(--accent100);
+}
+
+.white100{
+    color: var(--white100);
+}

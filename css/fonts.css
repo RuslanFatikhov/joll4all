@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&family=Inter:wght@400;700;900&display=swap');
+
+h1{  
+    font-family: "Inter Tight";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1em;
+    letter-spacing: -0.72px;
+}
+
+h2{  
+    font-family: "Inter Tight";
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2em;
+    letter-spacing: -0.2px;
+}
+
+h3{  
+    font-family: "Inter Tight";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2em;
+    letter-spacing: -0.2px;
+}
+
+p{  
+    font-family: "Inter Tight";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+}
+
+.bold{
+    font-weight: 700;
+}

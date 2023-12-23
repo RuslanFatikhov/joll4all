@@ -1,9 +1,9 @@
 // Инициализация карты с использованием Mapbox
-mapboxgl.accessToken = 'pk.eyJ1IjoiZnV6bGFuIiwiYSI6ImNscGd4eTZmaTAyZnkya3AwZTAwcmozZTMifQ.JCX6VtrorIpJIwWedIWi_w';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZnV6bGFuIiwiYSI6ImNscWk1eDU0bTFvMHoyaXJxOWk0anYxeDMifQ.PLwVDtFsFhHRfNnAPuieKA';
 
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v10',
+    style: 'mapbox://styles/mapbox/dark-v10',
     center: [76.9472, 43.249345],
     zoom: 10
 });
@@ -20,7 +20,7 @@ const safetyLevels = {
 let clickedItem = null; // Хранит информацию о последнем выбранном элементе
 
 // Загрузка данных из JSON-файла
-fetch('./json/bus.json')
+fetch('json/bus.json')
     .then(response => response.json())
     .then(data => {
         data.forEach(bikePath => {
